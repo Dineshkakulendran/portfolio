@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>portfolio</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!--font awesome link-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!--box icon link-->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+
+  <div id="header">
+    <div class="container">
+      <nav>
+        <a href="#" class="logo"><span>D</span>inesh<span>K</span>a</a>
+
+        <ul id="sidemenu">
+          <i class="fas fa-times" onclick="closemenu()"></i>
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#skills1">Skills</a></li>
+          <li><a href="#portfolio">My Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="fas fa-bars" onclick="openmenu()"></i>
+      </nav>
+
+      <div class="container">
+        <div class="header-text" id="header">
+          <h1>Hi, I'm <span>D</span>ineshka <span>K</span>ulendran.</h1>
+          <h2>From SriLanka.</h2>
+          <h3>UI/UX <span>Designer</span> & Frontend <span>Developer.</span></h3>
+          <p>Crafting intuitive interface and Coding interactive user experiences for web applications.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+<!--about-->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/me.jpg">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title"><span>About</span> Me</h1>
+
+          <p>Hi everyone! I'm <span>Dineshka Kulendran</span>, A versatile digital creator proficient in both web development and UI/UX design, I specialize in crafting immersive digital experiences by seamlessly integrating front-end and back-end development techniques. My expertise spans HTML, CSS, and JavaScript, I design interfaces that captivate and delight users, ensuring seamless interactions across platforms. Proficient in tools like Adobe XD, and Figma, I meticulously refine every detail from wireframes to prototypes. Let's collaborate to turn your vision into reality and elevate your digital presence with impactful design and functionality!
+          </p>
+
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')">Educations</p>
+          </div>
+
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>UI/UX Designing</span><br>Crafting seamless digital user experiences creatively.</li>
+              <li><span>Web Development</span><br>Frontend & Backend Development for websites.</li>
+              <li><span>Logo Designer</span><br>creating attractive logos for the website through innovation, branding, graphics, identity, and distinctiveness.</li>
+            </ul>
+          </div>
+
+          
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>2024 - current</span><br>Bsc(Hons) Computer Science Undergraduate student.</li>
+              <li><span>2020 - 2021</span><br>Diploma in IT at Royal International College Student.</li>
+              <li><span>2020 - 2021</span><br>Diploma in English at Royal International College Student.</li>
+            </ul>
+          </div>
+
+          
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>2021 - current</span><br>Undergraduate Student at Saegis Campus, Nugeagoda, Colombo.</li>
+              <li><span>2021 - 2022</span><br>Professional Certificate in Marketing by SLIM at Royal International College, Trincomalee.</li>
+              <li><span>2021 - 2022</span><br>Diploma in English and Diploma in IT at Royal International College, Trincomalee.</li>
+              <li><span>2018 - 2020</span><br>Advance Level in Mathematics at T/Sri Shanmuga Hindu Ladies College, Trincomalee.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--services-->  
+<div id="services">
+  <div class="container">
+    <h1 class="sub-title">My <span>Services</span></h1>
+    <div class="services-list">
+      <div>
+        <i class="fa-solid fa-code"></i>
+        <h2>UI/UX Design</h2>
+        <p>Harnessing the power of Figma, I design seamlessly blends functionality and aesthetics, ensuring intuitive user interactions. With meticulous attention to detail, I deliver prototypes and wireframes that bring your vision to life. Let's collaborate to create captivating UI/UX solutions that drive success for your business.
+        </p>
+        <!--<a href="#">Learn more</a>-->
+      </div>
+
+      <div>
+        <i class="fa-solid fa-crop"></i>
+        <h2>Web Development</h2>
+        <p>I specialize in front-end development with HTML, CSS, and JavaScript. My tailored solutions prioritize innovation and client satisfaction, ensuring seamless functionality and captivating user experiences. Let us bring your digital vision to life.</p>
+        <!--<a href="#">Learn more</a>-->
+      </div>
+
+      <div>
+        <i class="fa-brands fa-app-store"></i>
+        <h2>Logo Design</h2>
+        <p>I specialize in crafting unique and memorable logos using Canva. Our designs capture the essence of your brand, ensuring visual appeal and brand identity consistency. With a focus on creativity and client satisfaction, we bring your vision to life through captivating logo designs that leave a lasting impression.</p>
+        <!--<a href="#">Learn more</a>-->
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="skills1">
+  <!--<div class="container">-->
+      <h1 class="sub-title">My <span>Skills</span></h1>
+  
+    <div class="skills-row">
+      <div class="skills-column">
+        <h3 class="title">Coding Skills</h3>
+  
+        <div class="skills-box">
+          <div class="skills-content">
+            <div class="progress">
+              <h3>HTML <span>70%</span></h3>
+              <div class="bar"><span></span></div>
+            </div>
+  
+            <div class="progress">
+              <h3>CSS <span>70%</span></h3>
+              <div class="bar"><span></span></div>
+            </div>
+  
+            <div class="progress">
+              <h3>JavaScipt <span>50%</span></h3>
+              <div class="bar"><span></span></div>
+            </div>
+  
+            <div class="progress">
+              <h3>Java<span>55%</span></h3>
+              <div class="bar"><span></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="skills-column">
+        <h3 class="title">Professional Skills</h3>
+  
+        <div class="skills-box">
+          <div class="skills-content">
+            <div class="progress">
+              <h3>Figma<span>75%</span></h3>
+              <div class="bar"><span></span></div>
+            </div>
+  
+            <div class="progress">
+              <h3>Canva<span>55%</span></h3>
+              <div class="bar"><span></span></div>
+            </div>
+  
+            <div class="progress">
+              <h3>Adobe Flash<span>40%</span></h3>
+              <div class="bar"><span></span></div>
+            </div>
+  
+            <div class="progress">
+              <h3>Photo Shop<span>45%</span></h3>
+              <div class="bar"><span></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!--</div>-->
+  </div>
+  <!--Skill section end-->
+
+  <!--portfolio-->
+  <div id="portfolio">
+    <!--<div class="container">-->
+      <h1 class="sub-title">My <span>Work</span></h1>
+      <div class="content">
+
+        <div class="work">
+          <img src="images/my1.png">
+          <div class="layer">
+            <h3>UI/UX Design for study website</h3>
+            <p>This is a web design for a study application called StudySphere. I created this page using the Figma framework.</p>
+            <!--<a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>-->
+          </div>
+        </div>
+  
+        <div class="work">
+          <img src="images/Wireframe - 1.png">
+          <div class="layer">
+            <h3>UI/UX Design for Taxi Service</h3>
+            <p>This is a sample taxi service. I created it to practice myself using the Figma framework.</p>
+            <!--<a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>-->
+          </div>
+        </div>
+  
+        <div class="work">
+          <img src="images/mm.png">
+          <div class="layer">
+            <h3>UI/UX design for Online Music webpage</h3>
+            <p>This is a sample music online concern that I designed for a competition on a sample webpage using the Figma framework.</p>
+            <!--<a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>-->
+          </div>
+        </div>
+  
+        <div class="work">
+          <img src="images/c.jpg">
+          <div class="layer">
+            <h3>UI/UX Design for LMS</h3>
+            <p>This is a sample design for the LMS service to practice for myself in Figma.</p>
+            <!--<a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>-->
+          </div>
+        </div>
+  
+        <div class="work">
+          <img src="images/my logo .png">
+          <div class="layer">
+            <h3>Study purpose Logo Creation.</h3>
+            <p>This is a logo that I created to practice creating a UI design for a sample web application called StudySphere.</p>
+            <!--<a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>-->
+          </div>
+        </div>
+
+        <div class="work">
+          <img src="images/mainlogo.jpg">
+          <div class="layer">
+            <h3>Pragnancy Related Web Application</h3>
+            <p>This project initiative aims to provide comprehensive support for expecting, currently pregnant, and postpartum mothers in Sri Lanka. Our team a^2dt, has been dedicated to this endeavor since the second semester of our first year. Although the application is still a work in progress, we are committed to refining and completing it to effectively support mothers across the country.</p>
+            <!--<a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>-->
+          </div>
+        </div>
+  
+        <div class="work">
+          <img src="images/my2.png">
+          <div class="layer">
+            <h3>Clone Youtube Design</h3>
+            <p>This is a sample YouTube document I created to practice myself using the Visual Studio Code framework using HTML and CSS. </p>
+            <!--<a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>-->
+          </div>
+        </div>
+  
+        <div class="work">
+          <img src="images/Screenshot 2024-02-24 123707.png">
+          <div class="layer">
+            <h3>Calculater code using HTML / CSS</h3>
+            <p>This is a sample working calculator to practice using HTML and CSS.</p>
+            <!--<a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>-->
+          </div>
+        </div>
+  
+      </div>
+      <!--<a href="#" class="btn">See more</a>-->
+    <!--</div>-->
+  </div>
+
+<!--contact-->
+<div id="contact">
+  <!--<div class="container">-->
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title"><span>Contact</span> Me</h1>
+        <p><i class="fa-solid fa-paper-plane"></i><a href="mailto:seethadineshka@gmail.com">seethadineshka@gmail.com</a></p>
+        <p><i class="fa-solid fa-phone"></i><a href="tel:+94761054934">(076) 105 4934</a></p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/dineshka.kulendran.7?mibextid=ZbWKwL" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+
+          <a href="https://www.instagram.com/itz_dineshka_01?igsh=dGxjaTE1dGlnZ3dz" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+
+          <a href="https://www.linkedin.com/in/dineshka-kulendran-243621260?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fa-brands fa-linkedin" ></i></a>
+
+          <a href="https://www.behance.net/dineshkkulendr" target="_blank"><i class="fa-brands fa-square-behance"></i></a>
+
+          <a href="https://github.com/Dineshkakulendran" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <a href="Resume.pdf" download class="btn btn2">Download CV</a>
+      </div>
+
+      <div class="contact-right">
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="a2b7b102-6730-4436-94a0-2054c5404c00">
+          <input type="text" name="Name" placeholder="Your Good Name" required>
+          <input type="email" name="Email" placeholder="Your Email" required>
+          <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+          <button type="submit" class="btn btn2">Submit</button>
+        </form>
+      </div>
+    </div>
+  <!--</div>-->
+</div>
+
+<div class="copyright">
+  <p>Copyright &copy; 2024 by Dineshka <i class="fa-solid fa-heart"></i> | All Rights Reserved.</p>
+</div>
+
+
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+      for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+      }
+      for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
+
+  <script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+      sidemenu.style.right = "0";
+    }
+    function closemenu(){
+      sidemenu.style.right = "-200px";
+    }
+  </script>
+
+</body>
+</html>
