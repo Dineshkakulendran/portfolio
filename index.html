@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dineshka Kulendran — UI/UX Designer &amp; Product Engineer</title>
+<meta name="description" content="Dineshka Kulendran — UI/UX Designer with a Computer Science background, designing enterprise healthcare, AI, SaaS and EdTech products.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-canvas" aria-hidden="true">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- App toolbar, Figma-style -->
+<header class="toolbar">
+  <div class="toolbar-left">
+    <button class="icon-btn" id="layersToggle" aria-label="Toggle layers panel"><i class="fa-solid fa-bars"></i></button>
+    <div class="file-crumb">
+      <i class="fa-regular fa-file-code file-icon"></i>
+      <span>Dineshka Kulendran</span><span class="crumb-sep">/</span><span class="crumb-file">Portfolio.fig</span>
+    </div>
+  </div>
+  <div class="toolbar-tools">
+    <button class="tool-btn active" title="Move"><i class="fa-solid fa-arrow-pointer"></i></button>
+    <button class="tool-btn" title="Frame"><i class="fa-regular fa-square"></i></button>
+    <button class="tool-btn" title="Pen"><i class="fa-solid fa-pen-nib"></i></button>
+    <button class="tool-btn" title="Text"><i class="fa-solid fa-t"></i></button>
+    <button class="tool-btn" title="Comment"><i class="fa-regular fa-comment"></i></button>
+  </div>
+  <div class="toolbar-right">
+    <div class="player-stack" aria-hidden="true">
+      <div class="player-dot" style="background:var(--accent-coral)" title="Recruiter — viewing">R</div>
+      <div class="player-dot" style="background:var(--accent-mint)" title="Hiring manager — viewing">H</div>
+      <div class="player-dot you" title="You">DK</div>
+    </div>
+    <a href="Dineshka_Kulendran_Resume.pdf" download="Dineshka_Kulendran_Resume.pdf" class="share-btn" id="downloadCvTop"><i class="fa-solid fa-download"></i> Resume</a>
+    <div class="avatar-chip">DK</div>
+  </div>
+</header>
+
+<div class="app-body">
+
+  <!-- Layers panel -->
+  <aside class="layers-panel" id="layersPanel">
+    <p class="panel-label">Pages</p>
+    <div class="layer-row page-row"><i class="fa-regular fa-file"></i> Portfolio</div>
+
+    <p class="panel-label">Layers</p>
+    <nav class="layer-tree" aria-label="Section navigation">
+      <a href="#hero" class="layer-row active" data-target="hero"><i class="fa-regular fa-square fa-fw"></i> Hero <i class="fa-regular fa-eye layer-eye"></i></a>
+      <a href="#about" class="layer-row" data-target="about"><i class="fa-regular fa-square fa-fw"></i> About <i class="fa-regular fa-eye layer-eye"></i></a>
+      <a href="#experience" class="layer-row" data-target="experience"><i class="fa-regular fa-square fa-fw"></i> Experience <i class="fa-regular fa-eye layer-eye"></i></a>
+      <a href="#skills" class="layer-row" data-target="skills"><i class="fa-regular fa-square fa-fw"></i> Skills <i class="fa-regular fa-eye layer-eye"></i></a>
+      <a href="#projects" class="layer-row" data-target="projects"><i class="fa-regular fa-square fa-fw"></i> Projects <i class="fa-regular fa-eye layer-eye"></i></a>
+      <a href="#services" class="layer-row" data-target="services"><i class="fa-regular fa-square fa-fw"></i> Services <i class="fa-regular fa-eye layer-eye"></i></a>
+      <a href="#education" class="layer-row" data-target="education"><i class="fa-regular fa-square fa-fw"></i> Education <i class="fa-regular fa-eye layer-eye"></i></a>
+      <a href="#certificates" class="layer-row" data-target="certificates"><i class="fa-regular fa-square fa-fw"></i> Certificates <i class="fa-regular fa-eye layer-eye"></i></a>
+      <a href="#contact" class="layer-row" data-target="contact"><i class="fa-regular fa-square fa-fw"></i> Contact <i class="fa-regular fa-eye layer-eye"></i></a>
+    </nav>
+
+    <div class="panel-footer">
+      <div class="status-chip"><span class="dot"></span> Available for work</div>
+      <div class="social-row">
+        <a href="http://www.linkedin.com/in/dineshka-kulendran-243621260" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/Dineshkakulendran" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://dineshkakulendran.github.io/portfolio/" target="_blank" rel="noopener" aria-label="Portfolio"><i class="fa-brands fa-figma"></i></a>
+        <a href="mailto:seethadineshka@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </aside>
+
+  <div class="layers-backdrop" id="layersBackdrop"></div>
+
+  <!-- Canvas -->
+  <main class="canvas">
+
+    <!-- HERO -->
+    <section id="hero" class="section hero-section">
+      <div class="artboard reveal">
+        <div class="artboard-tag">Homepage / Hero <span>1440 × 900</span></div>
+
+        <div class="hero-inner">
+          <p class="hero-hi">Hi, I'm</p>
+          <h1 class="hero-name">Dineshka Kulendran</h1>
+          <h2 class="hero-role"><span id="typedRole">UI/UX Designer</span><span class="cursor-blink">|</span></h2>
+          <p class="hero-tagline">UI/UX Designer with a Computer Science background, designing user-centered digital products across all industries.</p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View Projects <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="Dineshka_Kulendran_Resume.pdf" download="Dineshka_Kulendran_Resume.pdf" class="btn btn-ghost" id="downloadCvHero"><i class="fa-solid fa-download"></i> Download Resume</a>
+          </div>
+
+          <p class="availability"><span class="dot"></span> Available for Full-time · Remote · Hybrid</p>
+        </div>
+
+        <span class="handle handle-tl"></span><span class="handle handle-tr"></span>
+        <span class="handle handle-bl"></span><span class="handle handle-br"></span>
+
+        <div class="ghost-cursor ghost-1" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1 1L14 6.2L8.4 8.2L6.2 14L1 1Z" fill="var(--accent-coral)"/></svg>
+          <span class="ghost-name" style="background:var(--accent-coral)">Recruiter</span>
+        </div>
+        <div class="ghost-cursor ghost-2" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1 1L14 6.2L8.4 8.2L6.2 14L1 1Z" fill="var(--accent-mint)"/></svg>
+          <span class="ghost-name" style="background:var(--accent-mint)">Hiring Manager</span>
+        </div>
+      </div>
+
+      <div class="inspector reveal">
+        <p class="panel-label">Inspector</p>
+        <div class="inspector-row"><span>Role</span><strong>Product Design · Engineering</strong></div>
+        <div class="inspector-row"><span>Location</span><strong>Trincomalee &amp; Colombo, Sri Lanka</strong></div>
+        <div class="inspector-row"><span>Availability</span><strong>Full-time · Remote · Hybrid</strong></div>
+        <div class="inspector-row"><span>Background</span><strong>Computer Science</strong></div>
+        <p class="panel-label">Fill</p>
+        <div class="swatch-row">
+          <span class="swatch" style="background:var(--accent-violet)"></span>
+          <span class="swatch" style="background:var(--accent-blue)"></span>
+          <span class="swatch" style="background:var(--accent-coral)"></span>
+          <span class="swatch" style="background:var(--accent-mint)"></span>
+        </div>
+      </div>
+
+      <div class="trusted-row reveal">
+        <p class="trusted-label">Designing across</p>
+        <div class="trusted-tags">
+          <span>Enterprise Healthcare Systems</span>
+          <span>AI-Powered Platforms</span>
+          <span>SaaS Applications</span>
+          <span>EdTech Products</span>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-cue" aria-label="Scroll down"><i class="fa-solid fa-chevron-down"></i></a>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="frame-tag reveal">Frame → About <span>/ 1440</span></div>
+      <div class="section-head reveal">
+        <h2 class="section-title">About Me</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="glass-card about-copy reveal">
+          <p>UI/UX Designer with a Computer Science background, experienced in designing user-centered digital products across healthcare, AI, SaaS, and EdTech platforms.</p>
+          <p>Strong in UX research, user flows, wireframing, prototyping, and Figma, with hands-on experience delivering multi-role systems and live products used by real hospitals, clinics, and startups.</p>
+          <p>Known for collaborating with cross-functional teams — doctors, product managers, developers, and stakeholders — to translate complex requirements into intuitive, scalable design solutions.</p>
+        </div>
+
+        <div class="glass-card about-facts reveal">
+          <p class="panel-label">Quick facts</p>
+          <div class="fact-row"><i class="fa-solid fa-graduation-cap"></i><span>BSc (Hons) Computer Science, undergraduate</span></div>
+          <div class="fact-row"><i class="fa-solid fa-heart-pulse"></i><span>Healthcare &amp; AI product design</span></div>
+          <div class="fact-row"><i class="fa-solid fa-layer-group"></i><span>Multi-role systems &amp; design systems</span></div>
+          <div class="fact-row"><i class="fa-solid fa-users"></i><span>Cross-functional collaboration</span></div>
+          <div class="fact-row"><i class="fa-solid fa-location-dot"></i><span>Trincomalee &amp; Colombo, Sri Lanka</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="frame-tag reveal">Frame → Experience <span>/ 1440</span></div>
+      <div class="section-head reveal">
+        <h2 class="section-title">Experience</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="glass-card timeline-card">
+            <span class="timeline-date">Oct 2024 – Present</span>
+            <h3>UI/UX Designer</h3>
+            <p class="timeline-company">ApexIQ AI Solutions Pvt Ltd · Startup Environment</p>
+            <ul>
+              <li>Led end-to-end UI/UX design for multiple AI and platform-based products, from concept to deployment.</li>
+              <li>Designed AI-based Accounting and Call Analysis systems with multi-role flows for Admin, Super Admin and Users.</li>
+              <li>Designed an EdTech platform covering student journeys, management dashboards and admin panels.</li>
+              <li>Redesigned the company website and delivered UI/UX &amp; branding for a social media platform.</li>
+              <li>Mentored junior designers and collaborated closely with developers on Play Store–ready handovers.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="glass-card timeline-card">
+            <span class="timeline-date">Oct 2024 – Apr 2025 · Remote / Hybrid · Internship</span>
+            <h3>Product Engineer &amp; UI/UX Designer</h3>
+            <p class="timeline-company">Arogya Life Systems Lanka (Pvt) Ltd · Healthcare Software Solutions</p>
+            <ul>
+              <li>Worked closely with doctors, nurses and hospital staff to understand daily workflows and usability issues.</li>
+              <li>Designed UI/UX for healthcare systems including EHR, EMR, Pharmacy, Lab, Billing and Referral modules.</li>
+              <li>Designed Doctor EMR features such as session management, quick prescription and dental-specific views.</li>
+              <li>Prepared UI/UX documentation and user flows for development and implementation teams.</li>
+              <li>Designed interfaces used in real hospital systems across Sri Lanka and the Maldives.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="frame-tag reveal">Frame → Skills <span>/ 1440</span></div>
+      <div class="section-head reveal">
+        <h2 class="section-title">Skills &amp; Tools</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="glass-card skill-card reveal">
+          <h3><i class="fa-solid fa-compass-drafting"></i> Core Design</h3>
+          <div class="skill-bar" data-level="92"><span class="skill-name">Figma</span><div class="bar-track"><div class="bar-fill"></div></div></div>
+          <div class="skill-bar" data-level="85"><span class="skill-name">UX Research</span><div class="bar-track"><div class="bar-fill"></div></div></div>
+          <div class="skill-bar" data-level="88"><span class="skill-name">Prototyping</span><div class="bar-track"><div class="bar-fill"></div></div></div>
+          <div class="skill-bar" data-level="82"><span class="skill-name">Design Systems</span><div class="bar-track"><div class="bar-fill"></div></div></div>
+          <div class="skill-bar" data-level="80"><span class="skill-name">Information Architecture</span><div class="bar-track"><div class="bar-fill"></div></div></div>
+        </div>
+
+        <div class="glass-card skill-card reveal">
+          <h3><i class="fa-solid fa-users"></i> Working style</h3>
+          <div class="skill-bar" data-level="90"><span class="skill-name">Cross-functional collaboration</span><div class="bar-track"><div class="bar-fill"></div></div></div>
+          <div class="skill-bar" data-level="85"><span class="skill-name">Stakeholder communication</span><div class="bar-track"><div class="bar-fill"></div></div></div>
+          <div class="skill-bar" data-level="88"><span class="skill-name">Ownership &amp; accountability</span><div class="bar-track"><div class="bar-fill"></div></div></div>
+          <div class="skill-bar" data-level="80"><span class="skill-name">Leadership &amp; mentoring</span><div class="bar-track"><div class="bar-fill"></div></div></div>
+        </div>
+
+        <div class="glass-card tag-panel reveal">
+          <p class="panel-label">Tools</p>
+          <div class="tag-cloud">
+            <span class="tag">Figma</span><span class="tag">Canva</span>
+          </div>
+          <p class="panel-label">UX practice</p>
+          <div class="tag-cloud">
+            <span class="tag">User Research</span><span class="tag">Stakeholder Interviews</span><span class="tag">Requirement Analysis</span>
+            <span class="tag">User Flows</span><span class="tag">Site Maps</span><span class="tag">Journey Mapping</span>
+            <span class="tag">Usability Testing</span><span class="tag">Accessibility (WCAG basics)</span><span class="tag">Responsive Design</span>
+            <span class="tag">Design Handoff</span><span class="tag">UX Documentation</span>
+          </div>
+          <p class="panel-label">Product domains</p>
+          <div class="tag-cloud">
+            <span class="tag">SaaS</span><span class="tag">AI Platforms</span><span class="tag">Healthcare Systems</span>
+            <span class="tag">EdTech</span><span class="tag">Multi-role Systems (Admin / Super Admin / User)</span>
+          </div>
+          <p class="panel-label">Languages</p>
+          <div class="tag-cloud">
+            <span class="tag">Tamil — Native</span><span class="tag">English — Fluent</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="frame-tag reveal">Frame → Projects <span>/ 1440</span></div>
+      <div class="section-head reveal">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-note">Professional work and academic projects, pulled straight from the CV.</p>
+      </div>
+
+      <p class="projects-subhead reveal">Professional work</p>
+      <div class="projects-grid">
+        <article class="glass-card project-card reveal">
+          <span class="component-badge"><i class="fa-solid fa-diamond"></i>Instance</span>
+          <div class="project-thumb"><i class="fa-solid fa-heart-pulse"></i></div>
+          <div class="project-body">
+            <span class="project-tag">Healthcare · Internship</span>
+            <h3>Enterprise Healthcare Platform</h3>
+            <p><strong>Problem:</strong> Clinical staff needed faster, clearer workflows across EHR, EMR, Pharmacy, Lab, Billing and Referral modules.</p>
+            <p><strong>Solution:</strong> Designed doctor EMR features — session management, quick prescription, dental-specific views — now used in real hospital systems across Sri Lanka and the Maldives.</p>
+            <div class="project-links"><span>Arogya Life Systems Lanka</span></div>
+          </div>
+        </article>
+
+        <article class="glass-card project-card reveal">
+          <span class="component-badge"><i class="fa-solid fa-diamond"></i>Instance</span>
+          <div class="project-thumb"><i class="fa-solid fa-robot"></i></div>
+          <div class="project-body">
+            <span class="project-tag">AI · Multi-role SaaS</span>
+            <h3>AI Accounting &amp; Call Analysis Systems</h3>
+            <p><strong>Problem:</strong> A growing startup needed AI-powered products with different flows for Admin, Super Admin and end users.</p>
+            <p><strong>Solution:</strong> Led end-to-end UI/UX from concept to deployment, designing scalable multi-role flows.</p>
+            <div class="project-links"><a href="https://apexiq.ai/" target="_blank" rel="noopener">ApexIQ AI Solutions <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+          </div>
+        </article>
+
+        <article class="glass-card project-card reveal">
+          <span class="component-badge"><i class="fa-solid fa-diamond"></i>Instance</span>
+          <div class="project-thumb"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div class="project-body">
+            <span class="project-tag">EdTech</span>
+            <h3>EdTech Platform</h3>
+            <p><strong>Problem:</strong> A platform needed to serve students and administrators with very different needs.</p>
+            <p><strong>Solution:</strong> Designed student journeys, management dashboards and admin panels for a single cohesive product.</p>
+            <div class="project-links"><a href="https://apexiq.ai/" target="_blank" rel="noopener">ApexIQ AI Solutions <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+          </div>
+        </article>
+      </div>
+
+      <p class="projects-subhead reveal">Academic &amp; personal projects</p>
+      <div class="projects-grid">
+        <article class="glass-card project-card reveal">
+          <span class="component-badge"><i class="fa-solid fa-diamond"></i>Instance</span>
+          <div class="project-thumb"><i class="fa-solid fa-baby-carriage"></i></div>
+          <div class="project-body">
+            <span class="project-tag">Mobile App</span>
+            <h3>Pregnancy Mobile App</h3>
+            <p>Focusing on intuitive navigation, user support features, and a seamless experience for expectant mothers.</p>
+            <div class="project-links"><a href="https://www.linkedin.com/posts/dineshka-kulendran-243621260_uiuxdesign-pregnancyapp-mobiledesign-activity-7241734631690010625-SL9d" target="_blank" rel="noopener">LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+          </div>
+        </article>
+
+        <article class="glass-card project-card reveal">
+          <span class="component-badge"><i class="fa-solid fa-diamond"></i>Instance</span>
+          <div class="project-thumb"><i class="fa-solid fa-cloud-sun-rain"></i></div>
+          <div class="project-body">
+            <span class="project-tag">Web Redesign</span>
+            <h3>Dept. of Meteorology — Sri Lanka</h3>
+            <p>Redesigned the official government webpage in Figma, focused on user-centered design, modern aesthetics and enhanced navigation.</p>
+            <div class="project-links"><a href="https://www.figma.com/proto/1p5p8c7NphJwlYcxoeMoBb/Untitled?node-id=1-353" target="_blank" rel="noopener"><i class="fa-brands fa-figma"></i> Prototype</a></div>
+          </div>
+        </article>
+
+        <article class="glass-card project-card reveal">
+          <span class="component-badge"><i class="fa-solid fa-diamond"></i>Instance</span>
+          <div class="project-thumb"><i class="fa-solid fa-spray-can-sparkles"></i></div>
+          <div class="project-body">
+            <span class="project-tag">E-commerce · PHP</span>
+            <h3>Perfume Shop</h3>
+            <p>Dynamic e-commerce website featuring user authentication, cart management and personalized experiences.</p>
+            <div class="project-links"><a href="https://drive.google.com/file/d/182qKQ_KauLOb33JQtXXDF9JpOwewCts5/view?usp=sharing" target="_blank" rel="noopener">Demo video <i class="fa-solid fa-arrow-up-right-from-square"></i></a><a href="https://drive.google.com/drive/folders/1kUK0inbLnNa3jkyImFL01xxScTq8V7df?usp=sharing" target="_blank" rel="noopener">Code</a></div>
+          </div>
+        </article>
+
+        <article class="glass-card project-card reveal">
+          <span class="component-badge"><i class="fa-solid fa-diamond"></i>Instance</span>
+          <div class="project-thumb"><i class="fa-solid fa-utensils"></i></div>
+          <div class="project-body">
+            <span class="project-tag">Mobile App</span>
+            <h3>TastePalette — Restaurant App</h3>
+            <p>A Figma prototype for a restaurant menu app with vibrant aesthetics, clear categorization and smooth navigation.</p>
+            <div class="project-links"><a href="https://www.figma.com/proto/GpdFZH0ahRrpMxfxs7AIxz/food_app?node-id=51-29" target="_blank" rel="noopener"><i class="fa-brands fa-figma"></i> Prototype</a></div>
+          </div>
+        </article>
+
+        <article class="glass-card project-card reveal">
+          <span class="component-badge"><i class="fa-solid fa-diamond"></i>Instance</span>
+          <div class="project-thumb"><i class="fa-solid fa-book-open"></i></div>
+          <div class="project-body">
+            <span class="project-tag">Mobile App</span>
+            <h3>Class Mate Study App</h3>
+            <p>A Figma prototype for the Class Mate mobile app's signup flow — intuitive navigation, secure login and user-friendly aesthetics.</p>
+            <div class="project-links"><a href="https://www.figma.com/proto/V5tq6dNPsStSkWYmzpEFeN/Untitled?node-id=45-71" target="_blank" rel="noopener"><i class="fa-brands fa-figma"></i> Prototype</a></div>
+          </div>
+        </article>
+
+        <article class="glass-card project-card reveal">
+          <span class="component-badge"><i class="fa-solid fa-diamond"></i>Instance</span>
+          <div class="project-thumb"><i class="fa-solid fa-spa"></i></div>
+          <div class="project-body">
+            <span class="project-tag">Web Design</span>
+            <h3>Beauty Blog Website</h3>
+            <p>A Figma design for a beauty blog, with an editorial layout built for readability and visual appeal.</p>
+            <div class="project-links"><a href="https://www.figma.com/design/T4xV0cn2JfuPgwbAMvdsq3/Beauty-Blog-Website?node-id=0-1" target="_blank" rel="noopener"><i class="fa-brands fa-figma"></i> Figma file</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section">
+      <div class="frame-tag reveal">Frame → Services <span>/ 1440</span></div>
+      <div class="section-head reveal">
+        <h2 class="section-title">Services</h2>
+      </div>
+
+      <div class="services-grid">
+        <div class="glass-card service-card reveal">
+          <span class="component-badge"><i class="fa-solid fa-diamond"></i>Instance</span><i class="fa-solid fa-magnifying-glass"></i><h3>UX Research</h3><p>User interviews, usability testing and journey mapping to ground decisions in evidence.</p></div>
+        <div class="glass-card service-card reveal">
+          <span class="component-badge"><i class="fa-solid fa-diamond"></i>Instance</span><i class="fa-solid fa-object-group"></i><h3>Product &amp; UI Design</h3><p>Wireframes to polished, responsive interfaces for web and mobile products.</p></div>
+        <div class="glass-card service-card reveal">
+          <span class="component-badge"><i class="fa-solid fa-diamond"></i>Instance</span><i class="fa-solid fa-layer-group"></i><h3>Design Systems</h3><p>Token-based, scalable component libraries that keep teams shipping consistent UI.</p></div>
+        <div class="glass-card service-card reveal">
+          <span class="component-badge"><i class="fa-solid fa-diamond"></i>Instance</span><i class="fa-solid fa-diagram-project"></i><h3>Information Architecture</h3><p>Structuring complex products so users always know where they are.</p></div>
+        <div class="glass-card service-card reveal">
+          <span class="component-badge"><i class="fa-solid fa-diamond"></i>Instance</span><i class="fa-solid fa-vial"></i><h3>Usability Testing</h3><p>Structured testing sessions that turn user behavior into concrete design fixes.</p></div>
+        <div class="glass-card service-card reveal">
+          <span class="component-badge"><i class="fa-solid fa-diamond"></i>Instance</span><i class="fa-solid fa-code"></i><h3>Design Handoff &amp; Implementation Support</h3><p>Developer handoff, design specifications, and hands-on support through implementation and release.</p></div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section">
+      <div class="frame-tag reveal">Frame → Education <span>/ 1440</span></div>
+      <div class="section-head reveal">
+        <h2 class="section-title">Education</h2>
+      </div>
+
+      <div class="education-grid">
+        <div class="glass-card edu-card reveal">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <h3>BSc (Hons)<br><span>Computer Science</span></h3>
+          <p class="edu-school">Saegis Campus, Nugegoda, Colombo</p>
+          <p class="edu-date">Oct 2022 – Present</p>
+        </div>
+        <div class="glass-card edu-card reveal">
+          <i class="fa-solid fa-calculator"></i>
+          <h3>Advanced Level<br><span>Mathematics stream</span></h3>
+          <p class="edu-school">Sri Shanmuga Hindu Ladies College, Trincomalee</p>
+          <p class="edu-date">2018 – 2020</p>
+        </div>
+        <div class="glass-card edu-card reveal">
+          <i class="fa-solid fa-school"></i>
+          <h3>Ordinary Level<br><span>5A, 2B, C, S</span></h3>
+          <p class="edu-school">Sri Shanmuga Hindu Ladies College, Trincomalee</p>
+          <p class="edu-date">2017</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES & ACHIEVEMENTS -->
+    <section id="certificates" class="section">
+      <div class="frame-tag reveal">Frame → Certificates <span>/ 1440</span></div>
+      <div class="section-head reveal">
+        <h2 class="section-title">Certificates &amp; Achievements</h2>
+      </div>
+
+      <div class="education-grid">
+        <div class="glass-card edu-card reveal">
+          <i class="fa-solid fa-certificate"></i>
+          <h3>Diploma in Computing<br><span>&amp; Diploma in English</span></h3>
+          <p class="edu-school">Royal International College, Trincomalee</p>
+          <p class="edu-date">2020 – 2021</p>
+          <div class="project-links" style="justify-content:center; margin-top:12px;">
+            <a href="https://drive.google.com/file/d/1zULnEx9wTKsGVvEWUdeeApK6FMxZlRM5/view?usp=sharing" target="_blank" rel="noopener">Computing cert <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            <a href="https://drive.google.com/file/d/1uS3wJ15q7DlMO5vZb1uawVkm6r5sjij6/view?usp=sharing" target="_blank" rel="noopener">English cert</a>
+          </div>
+        </div>
+        <div class="glass-card edu-card reveal">
+          <i class="fa-solid fa-bullhorn"></i>
+          <h3>Professional Certificate<br><span>in Marketing — SLIM</span></h3>
+          <p class="edu-school">Royal International College, Trincomalee</p>
+          <p class="edu-date">2020 – 2021</p>
+        </div>
+        <div class="glass-card edu-card reveal">
+          <i class="fa-solid fa-trophy"></i>
+          <h3>Saegis Code Pulse<br><span>Designathon — Winner</span></h3>
+          <p class="edu-school">Saegis Campus, Nugegoda</p>
+          <p class="edu-date">2024</p>
+          <div class="project-links" style="justify-content:center; margin-top:12px;">
+            <a href="https://drive.google.com/file/d/1KqFQdrPwyw9yCy2CHFFCb18_JPSruKGl/view?usp=sharing" target="_blank" rel="noopener">Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <div class="glass-card edu-card reveal">
+          <i class="fa-solid fa-award"></i>
+          <h3>Saegis Code Pulse<br><span>Designathon — 2nd Runner-up</span></h3>
+          <p class="edu-school">Saegis Campus, Nugegoda</p>
+          <p class="edu-date">2023</p>
+          <div class="project-links" style="justify-content:center; margin-top:12px;">
+            <a href="https://drive.google.com/file/d/1QEeboKfeJuFnoV2A4GF52C3fU4Ic0pfQ/view?usp=sharing" target="_blank" rel="noopener">Certificate <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="frame-tag reveal">Frame → Contact <span>/ 1440</span></div>
+      <div class="section-head reveal">
+        <h2 class="section-title">Let's Work Together</h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="glass-card contact-info reveal">
+          <p class="panel-label">Reach me</p>
+          <div class="fact-row"><i class="fa-solid fa-envelope"></i><span>seethadineshka@gmail.com</span></div>
+          <div class="fact-row"><i class="fa-solid fa-phone"></i><span>+94 76 143 3661</span></div>
+          <div class="fact-row"><i class="fa-brands fa-whatsapp"></i><span>+94 76 105 4934</span></div>
+          <div class="fact-row"><i class="fa-solid fa-location-dot"></i><span>Trincomalee &amp; Colombo, Sri Lanka</span></div>
+          <div class="fact-row"><i class="fa-solid fa-circle-check"></i><span>Open to Full-time, Remote &amp; Hybrid</span></div>
+          <p class="panel-label">Elsewhere</p>
+          <div class="social-row">
+            <a href="http://www.linkedin.com/in/dineshka-kulendran-243621260" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/Dineshkakulendran" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://dineshkakulendran.github.io/portfolio/" target="_blank" rel="noopener" aria-label="Portfolio"><i class="fa-brands fa-figma"></i></a>
+          </div>
+        </div>
+
+        <form class="glass-card contact-form reveal" id="contactForm">
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your name">
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com">
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary full-width">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+          <p class="form-status" id="formStatus" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; <span id="year"></span> Dineshka Kulendran. Designed &amp; built with HTML, CSS &amp; JavaScript.</p>
+    </footer>
+
+  </main>
+
+  <!-- Right inspector — mirrors real measurements of whichever section is in view -->
+  <aside class="properties-panel" id="propertiesPanel">
+    <div class="prop-tabs"><span class="prop-tab active">Design</span><span class="prop-tab">Prototype</span></div>
+    <div class="prop-body">
+      <div class="prop-selection"><i class="fa-solid fa-square"></i><strong id="propName">Hero</strong></div>
+
+      <div class="prop-group">
+        <p class="prop-group-label">Position</p>
+        <div class="prop-xy">
+          <div class="prop-field"><span>X</span><strong>0</strong></div>
+          <div class="prop-field"><span>Y</span><strong id="propY">0</strong></div>
+        </div>
+        <p class="prop-group-label">Size</p>
+        <div class="prop-wh">
+          <div class="prop-field"><span>W</span><strong>1440</strong></div>
+          <div class="prop-field"><span>H</span><strong id="propH">—</strong></div>
+        </div>
+      </div>
+
+      <div class="prop-group">
+        <p class="prop-group-label">Fill</p>
+        <div class="prop-fill-row"><span class="prop-fill-swatch" id="propFillSwatch" style="background:var(--accent-violet)"></span><span id="propFillLabel">Violet · 100%</span></div>
+      </div>
+
+      <div class="prop-group">
+        <p class="prop-group-label">Effects</p>
+        <div class="prop-effects">
+          <div class="prop-effect-row"><i class="fa-solid fa-droplet"></i> Background blur — 14</div>
+          <div class="prop-effect-row"><i class="fa-solid fa-border-top-left"></i> Corner radius — 16</div>
+        </div>
+      </div>
+
+      <div class="prop-group">
+        <p class="prop-group-label">Export</p>
+        <div class="prop-export"><i class="fa-regular fa-image"></i> Export as PNG</div>
+      </div>
+
+      <p class="prop-hint">This panel reads the real, live dimensions of whichever section is currently on screen — scroll to see it update.</p>
+    </div>
+  </aside>
+</div>
+
+<!-- Zoom control, bottom right, like the real Figma canvas -->
+<div class="zoom-control" role="group" aria-label="Canvas zoom">
+  <button class="zoom-btn" id="zoomOut" aria-label="Zoom out"><i class="fa-solid fa-minus"></i></button>
+  <span class="zoom-value" id="zoomValue">100%</span>
+  <button class="zoom-btn" id="zoomIn" aria-label="Zoom in"><i class="fa-solid fa-plus"></i></button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
